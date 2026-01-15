@@ -1,4 +1,4 @@
-n Data Tamper Forensic Analyzer
+ Data Tamper Forensic Analyzer
 Complete Technical Documentation
 Version: 1.0.0 | Date: January 15, 2026
 A professional-grade CSV data integrity analysis and tamper detection tool built with Python, Streamlit, and SQLite.
