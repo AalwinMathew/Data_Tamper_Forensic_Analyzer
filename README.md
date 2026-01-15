@@ -17,6 +17,9 @@ Table of Contents
 10. Troubleshooting
 11. FAQ
 12. Support & Contact
+
+
+
 1. Introduction
 The Data Tamper Forensic Analyzer is an advanced forensic analysis tool designed to detect and document data
 tampering, manipulation, and integrity violations in CSV files. Using SHA256 hashing, keyword detection algorithms,
@@ -46,6 +49,9 @@ Python Version Python 3.8 or higher
 RAM Minimum 2GB, Recommended 4GB+
 Storage Minimum 100MB for installation
 Internet Required for initial installation only
+
+
+
 4. Installation Guide
 Step 1: Clone Repository
 git clone https://github.com/your-repo/forensic-analyzer.git
@@ -62,6 +68,9 @@ Required Dependencies:
 • pandas>=1.3.0
 • plotly>=5.0.0
 • reportlab>=3.6.0
+
+
+
 5. Usage Instructions
 Step-by-Step Guide:
 1. Launch Application
@@ -101,6 +110,9 @@ Key Classes:
 • DataTamperForensicAnalyzer: Main analysis engine
 • Evidence: Data model for forensic records
 • ForensicHash: Cryptographic operations
+
+
+
 7. Database Schema
 Primary Table: Evidence
 The evidence table stores forensic analysis records:
@@ -114,6 +126,10 @@ column_count INTEGER Number of columns in row
 row_index INTEGER Row position in CSV
 tamper_flag INTEGER 1=Suspicious, 0=Clean
 suspicious_keywordsTEXT Detected suspicious keywords
+
+
+
+
 8. Forensic Analysis Methods
 Hash-Based Integrity Verification:
 SHA256 cryptographic hashing provides:
@@ -137,6 +153,10 @@ Temporal Analysis:
 • Chronological anomaly detection
 • Timeline reconstruction
 • Event sequencing
+
+
+
+
 10. Troubleshooting
 Q: CSV file not loading
 A: Ensure CSV has headers in first row. Check encoding is UTF-8.
@@ -159,6 +179,12 @@ Q: How long does scanning take?
 Typically 1-5 seconds per 1000 rows depending on hardware.
 Q: Is my data secure?
 Data stored locally in SQLite. No cloud transmission. Full control over storage.
+
+
+
+
+
+
 12. Support & Contact
 Documentation & Resources:
 • GitHub Repository: https://github.com/your-org/forensic-analyzer
