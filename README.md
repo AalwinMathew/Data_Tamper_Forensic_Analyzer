@@ -187,7 +187,7 @@ Data stored locally in SQLite. No cloud transmission. Full control over storage.
 
 12. Support & Contact
 Documentation & Resources:
-• GitHub Repository: https://github.com/your-org/forensic-analyzer
+• GitHub Repository: https://github.com/AalwinMathew/forensic-analyzer
 • Issues & Bug Reports: GitHub Issues
 • Feature Requests: GitHub Discussions
 Version History:
