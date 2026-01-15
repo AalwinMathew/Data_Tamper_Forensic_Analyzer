@@ -56,11 +56,17 @@ Internet Required for initial installation only
 Step 1: Clone Repository
 git clone https://github.com/your-repo/forensic-analyzer.git
 cd forensic-analyzer
+
+
 Step 2: Create Virtual Environment
 python -m venv venv
 source venv/bin/activate # On Windows: venv\Scripts\activate
+
+
 Step 3: Install Dependencies
 pip install -r requirements.txt
+
+
 Step 4: Run Application
 python -m streamlit run forensic_dashboard.py
 Required Dependencies:
@@ -71,41 +77,57 @@ Required Dependencies:
 
 
 
-5. Usage Instructions
+6. Usage Instructions
+
 Step-by-Step Guide:
+
 1. Launch Application
 Run the command: streamlit run forensic_dashboard.py
 The application opens in your default web browser at http://localhost:8501
-2. Upload CSV Files
+
+
+3. Upload CSV Files
 Click "Upload CSV files for tamper analysis" and select one or multiple CSV files
 Supported formats: Standard CSV with headers
-3. Initiate Forensic Scan
+
+
+5. Initiate Forensic Scan
 Click the "n DATA TAMPER SCAN" button to begin analysis
 Progress indicator shows real-time scanning status
-4. Review Results
+
+
+7. Review Results
 • View metrics: Total rows, tampered count, file count
 • Analyze area projections showing data volume trends
 • Examine tamper risk profiles
 • Inspect detailed row-level evidence
-5. Export Evidence
+
+
+8. Export Evidence
 Download forensic reports and evidence for legal proceedings
-6. Architecture & Design
+
+
+10. Architecture & Design
 System Architecture:
 The application follows a three-tier architecture:
+
 Tier 1: Presentation Layer (Streamlit)
 • Interactive web interface
 • Real-time data visualization
 • User input handling
+
 Tier 2: Business Logic Layer (Python)
 • CSV file parsing and validation
 • SHA256 cryptographic hashing
 • Tamper detection algorithms
 • Statistical analysis
+
 Tier 3: Data Persistence Layer (SQLite)
 • Evidence storage in relational database
 • Timestamp tracking
 • Query optimization
 • Data integrity maintenance
+
 Key Classes:
 • DataTamperForensicAnalyzer: Main analysis engine
 • Evidence: Data model for forensic records
@@ -113,7 +135,8 @@ Key Classes:
 
 
 
-7. Database Schema
+11. Database Schema
+
 Primary Table: Evidence
 The evidence table stores forensic analysis records:
 Column Type Description
@@ -130,24 +153,29 @@ suspicious_keywordsTEXT Detected suspicious keywords
 
 
 
-8. Forensic Analysis Methods
+12. Forensic Analysis Methods
+
 Hash-Based Integrity Verification:
+
 SHA256 cryptographic hashing provides:
 • Unique fingerprint for each data row
 • Detection of even single-character modifications
 • Proof of data authenticity
 • Compliance with forensic standards
+
 Keyword-Based Anomaly Detection:
 Suspicious keywords trigger tamper flags:
 • delete, drop, remove: Data deletion indicators
 • error, failed: System failure indicators
 • admin, root: Privilege escalation indicators
 • suspicious: User-marked suspicious entries
-Pattern-Based Analysis:
+
+pattern-Based Analysis:
 • Detects numeric anomalies (999999+ values)
 • Identifies unusual column distributions
 • Tracks cumulative data trends
 • Statistical outlier detection
+
 Temporal Analysis:
 • Timestamp-based evidence tracking
 • Chronological anomaly detection
@@ -157,7 +185,9 @@ Temporal Analysis:
 
 
 
-10. Troubleshooting
+13. Troubleshooting
+
+
 Q: CSV file not loading
 A: Ensure CSV has headers in first row. Check encoding is UTF-8.
 Q: Slow performance
@@ -168,7 +198,7 @@ Q: Memory errors
 A: Reduce CSV file size. Increase system RAM if persistent.
 Q: Port already in use
 A: Run: streamlit run forensic_dashboard.py --server.port 8502
-11. FAQ
+14. FAQ
 Q: What file formats are supported?
 Currently CSV files. JSON and Excel support planned.
 Q: Is the analysis legally defensible?
@@ -185,8 +215,10 @@ Data stored locally in SQLite. No cloud transmission. Full control over storage.
 
 
 
-12. Support & Contact
+15. Support & Contact
+
 Documentation & Resources:
+
 • GitHub Repository: https://github.com/AalwinMathew/forensic-analyzer
 • Issues & Bug Reports: GitHub Issues
 • Feature Requests: GitHub Discussions
