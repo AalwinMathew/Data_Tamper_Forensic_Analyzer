@@ -54,7 +54,7 @@ Internet Required for initial installation only
 
 4. Installation Guide
 Step 1: Clone Repository
-git clone https://github.com/your-repo/forensic-analyzer.git
+git clone  https://github.com/AalwinMathew/forensic-analyzer
 cd forensic-analyzer
 
 
